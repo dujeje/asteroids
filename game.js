@@ -178,7 +178,8 @@ function resetTimer() {
 function updateBestTime() {
     var bestTimeElement = document.getElementById("bestTime");
     if (bestTimeElement) {
-        bestTimeElement.innerHTML = "Best Time: " + formatTime(bestTime);
+        var displayedBestTime = bestTime === Infinity ? "N/A" : formatTime(bestTime);
+        bestTimeElement.innerHTML = "Best Time: " + displayedBestTime;
     }
 }
 
