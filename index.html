@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroids Game</title>
+    <style>
+        canvas {
+            border: 1px solid #000000;
+            background-color: #000000;
+        }
+        #timer, #bestTime {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 16px;
+        }
+        #bestTime {
+            top: 30px;
+        }
+    </style>
+</head>
+<body onload="startGame()">
+    <div id="gameContainer">
+    <div id="timer"></div>
+    <div id="bestTime"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
