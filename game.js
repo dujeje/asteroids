@@ -197,7 +197,7 @@ function endGame(collisionTime) {
         return;
     }
     currentTime -= startTime;
-    if (collisionTime > bestTime) {
+    if (collisionTime < bestTime || bestTime === Infinity) {
         bestTime = collisionTime;
         localStorage.setItem("bestTime", bestTime);
         updateBestTime();
@@ -207,7 +207,6 @@ function endGame(collisionTime) {
     resetTimer();
     showGameOver();
     updateTimer();
-
 }
 
 // Function to display the game over message and restart button
