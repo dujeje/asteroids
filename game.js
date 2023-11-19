@@ -197,7 +197,7 @@ function endGame(collisionTime) {
         return;
     }
     currentTime -= startTime;
-    if (collisionTime < bestTime || bestTime === Infinity) {
+    if (collisionTime > bestTime || bestTime === Infinity) {
         bestTime = collisionTime;
         localStorage.setItem("bestTime", bestTime);
         updateBestTime();
